@@ -18,16 +18,6 @@ Ferramenta de estudo **ativa e eficaz** para preparação de avaliações. Total
 
 O quiz aborda **80 questões** distribuídas nos seguintes tópicos:
 
-| Tema | Questões | %  |
-|------|----------|-----|
-| **Regra de Negócio** | 15-20 | 18-25% |
-| **Requisito Funcional** | 40-50 | 22-25% |
-| **Requisito Não Funcional** | 50-60 | 25-30% |
-| **Diagrama de Casos de Uso** | 40-50 | 21-25% |
-| **Diagrama de Classes** | 50-60 | 25-30% |
-
-### Tópicos Específicos
-
 ✅ Classificação de requisitos (RF vs RNF)  
 ✅ Tipos de RNF (Desempenho, Confiabilidade, Segurança, Usabilidade, Portabilidade, etc)  
 ✅ Relacionamentos UML (Include, Extend, Generalização)  
@@ -48,25 +38,65 @@ O quiz aborda **80 questões** distribuídas nos seguintes tópicos:
 💾 **Persistência de Dados** — Progresso salvo automaticamente no navegador  
 🌙 **Dark Theme** — Interface elegante otimizada para longas sessões  
 📱 **Responsivo** — Funciona em mobile, tablet e desktop  
-🚀 **Offline-First** — Nenhuma conexão necessária  
+🚀 **Offline-First** — Nenhuma conexão 
 
----
+Modos de Estudo
+Modo	Descrição
+🎲 Aleatório	Questões completamente aleatórias de todos os temas
+🆕 Apenas Novas	Foca em questões que você nunca respondeu
+🔄 Revisar Erradas	Treina apenas as questões que errou
+Filtros por Tema
+Estude de forma focada em qualquer tema:
 
-## 🎮 Como Usar
+📋 Regra de Negócio
+⚙️ Requisito Funcional
+📊 Requisito Não Funcional
+🎯 Diagrama de Casos de Uso
+📐 Diagrama de Classes
+Acompanhe seu Progresso
+Durante os estudos você visualiza em tempo real:
 
-### Abertura Rápida
+Respondidas — Total de questões já respondidas
+Acertos — Número de respostas corretas
+Taxa — Percentual de acertos
+Sequência — Quantas respostas corretas seguidas
+Clique em "Meu Desempenho" para um relatório detalhado por tema.
 
-1. **Baixe o projeto** (Clone ou Download)
-2. **Abra o arquivo `index.html`** no navegador
-3. **Comece a estudar!**
+🏗️ Estrutura do Projeto
 
-```bash
-# Se preferir via terminal:
-# Windows
-start index.html
+quiz-modelagem-sistemas/
+│
+├── index.html              # Página principal
+├── css/
+│   └── style.css          # Estilos (CSS puro)
+├── js/
+│   └── script.js          # Lógica da aplicação (JavaScript)
+└── README.md              # Este arquivo
 
-# macOS
-open index.html
+Tamanho total: ~68 KB (super leve!)
 
-# Linux
-xdg-open index.html
+💡 Tecnologias
+HTML5 — Estrutura semântica
+CSS3 — Design responsivo
+JavaScript Puro — Nenhuma dependência externa
+LocalStorage API — Persistência offline
+🎨 Design
+Paleta de Cores
+Fundo: Dark elegante (#0f1419)
+Primária: Cyan vibrante (#00d9ff)
+Secundária: Verde de sucesso (#00c853)
+Responsividade
+✅ Mobile (320px+)
+✅ Tablet (768px+)
+✅ Desktop (1200px+)
+🙏 Créditos
+Desenvolvido como ferramenta de estudo para a disciplina Modelagem de Sistemas I — SENAI.
+
+📜 Licença
+Este projeto está sob licença MIT.
+
+Versão: 1.0.0
+Última atualização: 2024
+Status: ✅ Completo e Funcional
+
+text
