@@ -77,28 +77,43 @@ quiz-modelagem-sistemas/
 
 **Tamanho total:** ~68 KB (super leve!)
 
-💡 Tecnologias
-HTML5 — Estrutura semântica
-CSS3 — Design responsivo
-JavaScript Puro — Nenhuma dependência externa
-LocalStorage API — Persistência offline
-🎨 Design
-Paleta de Cores
-Fundo: Dark elegante (#0f1419)
-Primária: Cyan vibrante (#00d9ff)
-Secundária: Verde de sucesso (#00c853)
-Responsividade
-✅ Mobile (320px+)
-✅ Tablet (768px+)
-✅ Desktop (1200px+)
-🙏 Créditos
+## 💡 Tecnologias
+
+- **HTML5** — Estrutura semântica
+- **CSS3** — Design responsivo
+- **JavaScript Puro** — Nenhuma dependência externa
+- **LocalStorage API** — Persistência offline
+
+---
+
+## 🎨 Design
+
+### Paleta de Cores
+
+- **Fundo:** Dark elegante (#0f1419)
+- **Primária:** Cyan vibrante (#00d4ff)
+- **Secundária:** Verde de sucesso (#00c853)
+
+### Responsividade
+
+- ✅ Mobile (320px+)
+- ✅ Tablet (768px+)
+- ✅ Desktop (1200px+)
+
+---
+
+## 🙏 Créditos
+
 Desenvolvido como ferramenta de estudo para a disciplina Modelagem de Sistemas I — SENAI.
 
-📜 Licença
-Este projeto está sob licença MIT.
+---
 
-Versão: 1.0.0
-Última atualização: 2024
-Status: ✅ Completo e Funcional
+## 📜 Licença
 
-text
+Este projeto está sob licença **MIT**.
+
+---
+
+**Versão:** 1.0.0  
+**Última atualização:** 2024  
+**Status:** ✅ Completo e Funcional
