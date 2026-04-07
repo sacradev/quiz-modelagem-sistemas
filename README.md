@@ -64,6 +64,7 @@ Clique em "Meu Desempenho" para um relatório detalhado por tema.
 
 ## 🏗️ Estrutura do Projeto
 
+```
 quiz-modelagem-sistemas/
 │
 ├── index.html # Página principal
@@ -72,6 +73,7 @@ quiz-modelagem-sistemas/
 ├── js/
 │ └── script.js # Lógica da aplicação (JavaScript)
 └── README.md # Este arquivo
+```
 
 **Tamanho total:** ~68 KB (super leve!)
 
