@@ -62,18 +62,18 @@ Taxa — Percentual de acertos
 Sequência — Quantas respostas corretas seguidas
 Clique em "Meu Desempenho" para um relatório detalhado por tema.
 
-🏗️ Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 
 quiz-modelagem-sistemas/
 │
-├── index.html              # Página principal
+├── index.html # Página principal
 ├── css/
-│   └── style.css          # Estilos (CSS puro)
+│ └── style.css # Estilos (CSS puro)
 ├── js/
-│   └── script.js          # Lógica da aplicação (JavaScript)
-└── README.md              # Este arquivo
+│ └── script.js # Lógica da aplicação (JavaScript)
+└── README.md # Este arquivo
 
-Tamanho total: ~68 KB (super leve!)
+**Tamanho total:** ~68 KB (super leve!)
 
 💡 Tecnologias
 HTML5 — Estrutura semântica
