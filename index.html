@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f1419">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Modelagem de Sistemas I - Quiz de Preparação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Modelagem de Sistemas I</h1>
+            <p>80 Questões • Preparação para Avaliação • Modo Offline</p>
+        </header>
+
+        <div id="homeScreen">
+            <div class="stats">
+                <div class="stat"><div class="stat-value" id="statTotal">0</div><div class="stat-label">Respondidas</div></div>
+                <div class="stat"><div class="stat-value" id="statCorrect">0</div><div class="stat-label">Acertos</div></div>
+                <div class="stat"><div class="stat-value" id="statRate">0%</div><div class="stat-label">Taxa</div></div>
+                <div class="stat"><div class="stat-value" id="statStreak">0</div><div class="stat-label">Sequência</div></div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                <div class="progress-text" id="progressText">0 de 80 questões únicas</div>
+            </div>
+
+            <div class="filters">
+                <label class="filter-label">Modo de Estudo</label>
+                <select class="filter-select" id="modeSelect">
+                    <option value="random">🎲 Modo Aleatório</option>
+                    <option value="new">🆕 Apenas Questões Novas</option>
+                    <option value="review">🔄 Revisar Questões Erradas</option>
+                </select>
+                <label class="filter-label">Filtrar por Tema</label>
+                <select class="filter-select" id="subjectSelect">
+                    <option value="all">📚 Todos os Temas</option>
+                    <option value="Regra de Negócio">📋 Regra de Negócio</option>
+                    <option value="Requisito Funcional">⚙️ Requisito Funcional</option>
+                    <option value="Requisito Não Funcional">📊 Requisito Não Funcional</option>
+                    <option value="Diagrama de Casos de Uso">🎯 Diagrama de Casos de Uso</option>
+                    <option value="Diagrama de Classes">📐 Diagrama de Classes</option>
+                </select>
+            </div>
+
+            <div class="menu">
+                <button class="menu-btn primary" onclick="app.startQuiz()">🚀 Começar a Estudar</button>
+                <div class="menu-row">
+                    <button class="menu-btn secondary" onclick="app.showStats()">📊 Meu Desempenho</button>
+                    <button class="menu-btn secondary" onclick="app.resetConfirm()">🔄 Resetar Progresso</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="questionArea" class="question-area">
+            <div class="question-header">
+                <span class="question-number" id="questionNumber"></span>
+                <span class="question-subject" id="questionSubject"></span>
+            </div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options" id="optionsContainer"></div>
+            <div id="feedback" class="feedback">
+                <div class="feedback-title" id="feedbackTitle"></div>
+                <div class="feedback-text" id="feedbackText"></div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn back" onclick="app.goBack()">← Voltar ao Menu</button>
+                <button class="action-btn confirm" id="btnConfirm" onclick="app.confirmAnswer()">Confirmar ✓</button>
+                <button class="action-btn next hidden" id="btnNext" onclick="app.nextQuestion()">Próxima →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="statsModal">
+        <div class="modal">
+            <h2>📊 Seu Desempenho</h2>
+            <div id="statsContent"></div>
+            <button class="modal-close" onclick="app.closeStats()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
