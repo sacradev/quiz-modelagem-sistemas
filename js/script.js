@@ -111,38 +111,29 @@ const app = {
     },
 
     displayQuestion() {
-        document.getElementById('questionNumber').textContent = `Questão ${this.current.id} de ${this.questions.length} (${this.poolIndex} de ${this.currentPool.length} nesta sessão)`;
-        document.getElementById('questionSubject').textContent = this.current.subject;
-        document.getElementById('questionText').textContent = this.current.question;
+    document.getElementById('questionNumber').textContent = `Questão ${this.current.id} de ${this.questions.length} (${this.poolIndex} de ${this.currentPool.length} nesta sessão)`;
+    document.getElementById('questionSubject').textContent = this.current.subject;
+    document.getElementById('questionText').textContent = this.current.question;
 
-        const container = document.getElementById('optionsContainer');
-        container.innerHTML = '';
+    const container = document.getElementById('optionsContainer');
+    container.innerHTML = '';
 
-        // 🎲 FISHER-YATES SHUFFLE (para as opções)
-        const optionIndices = [0, 1, 2, 3];
-        for (let i = optionIndices.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [optionIndices[i], optionIndices[j]] = [optionIndices[j], optionIndices[i]];
-        }
+    // ✅ SEM EMBARALHAMENTO - opções na ordem original
+    this.correctDisplayIndex = this.current.correct;
 
-        // Armazenar mapa para validação
-        this.optionMap = optionIndices;
-        this.correctDisplayIndex = optionIndices.indexOf(this.current.correct);
+    // Exibir opções em ordem
+    this.current.options.forEach((opt, displayIndex) => {
+        const div = document.createElement('div');
+        div.className = 'option';
+        div.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + displayIndex)}</span>${opt}`;
+        div.onclick = () => this.selectOption(displayIndex, div);
+        container.appendChild(div);
+    });
 
-        // Exibir opções embaralhadas
-        optionIndices.forEach((originalIndex, displayIndex) => {
-            const opt = this.current.options[originalIndex];
-            const div = document.createElement('div');
-            div.className = 'option';
-            div.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + displayIndex)}</span>${opt}`;
-            div.onclick = () => this.selectOption(displayIndex, div);
-            container.appendChild(div);
-        });
-
-        document.getElementById('feedback').classList.remove('show');
-        document.getElementById('btnConfirm').classList.remove('hidden');
-        document.getElementById('btnNext').classList.add('hidden');
-    },
+    document.getElementById('feedback').classList.remove('show');
+    document.getElementById('btnConfirm').classList.remove('hidden');
+    document.getElementById('btnNext').classList.add('hidden');
+},
 
     selectOption(index, element) {
         document.querySelectorAll('.option').forEach(el => el.classList.remove('selected'));
